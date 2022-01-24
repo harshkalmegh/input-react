@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Input from "../Components/Input/Input";
 import TextShow from "./TextShow";
 
 /**
@@ -10,7 +11,7 @@ import TextShow from "./TextShow";
  * 5. show the input data by state
  */
 
-function Input() {
+function Index() {
   const [input, setInput] = useState("");
 
   const handleUpdate = (e: any) => {
@@ -19,15 +20,15 @@ function Input() {
 
   return (
     <div>
-      <input
+      <Input
         type="text"
         onChange={handleUpdate}
         value={input}
         placeholder="Enter Here"
       />
-      <TextShow data={input} />
+      <TextShow input={input} />
     </div>
   );
 }
 
-export default Input;
+export default Index;
