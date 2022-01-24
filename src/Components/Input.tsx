@@ -1,4 +1,5 @@
 import { useState } from "react";
+import TextShow from "./TextShow";
 
 /**
  * Algorithm
@@ -18,15 +19,13 @@ function Input() {
 
   return (
     <div>
-      <div>
-        <input
-          type="text"
-          onChange={handleUpdate}
-          value={input}
-          placeholder="Enter Here"
-        />
-      </div>
-      <div>Input Text - {input}</div>
+      <input
+        type="text"
+        onChange={handleUpdate}
+        value={input}
+        placeholder="Enter Here"
+      />
+      <TextShow data={input} />
     </div>
   );
 }
